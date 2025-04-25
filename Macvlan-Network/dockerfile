@@ -1,0 +1,7 @@
+FROM nginx
+
+# Update packages
+RUN apt-get update
+
+# Install iputils-ping
+RUN apt-get install -y iputils-ping

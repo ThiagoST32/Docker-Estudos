@@ -1,0 +1,14 @@
+# Set the base image
+FROM python:3.9-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the requirements file into the container
+COPY . . 
+
+# CMD to set up the bridge network
+CMD ["python", "-m", "http.server", "8000"]
+
+# Expose the port the app runs on
+EXPOSE 8000
