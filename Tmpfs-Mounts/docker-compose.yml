@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  app:
+    image: nginx:latest
+    container_name: nginx-tmps
+    tmpfs:
+      - /tmp/cache:size=128k
+    command: sh -c "echo 'Teste Tmpfs' > /tmp/cache/teste.txt && nginx -g 'daemon off;'"
+    restart: unless-stopped

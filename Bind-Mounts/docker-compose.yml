@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  app:
+    image: mysql:8.0
+    container_name: mysql-volume
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+    volumes:
+      - ./mysql-data:/var/lib/mysql
